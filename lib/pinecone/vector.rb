@@ -34,7 +34,7 @@ module Pinecone
       self.class.post('/vectors/upsert', payload)
     end
 
-    def query(namespace: "", vector:, top_k: 10, include_values: false, include_metadata: true)
+    def query(namespace: "", vector:, top_k: 10, include_values: false, include_metadata: true, filter: {})
       inputs = {
         "namespace": namespace,
         "includeValues": include_values,

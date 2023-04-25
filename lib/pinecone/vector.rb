@@ -41,6 +41,7 @@ module Pinecone
         "includeMetadata": include_metadata,
         "topK": top_k,
         "vector": vector,
+        "filter": filter
       }.to_json
       payload = options.merge(body: inputs)
       self.class.post('/query', payload)
